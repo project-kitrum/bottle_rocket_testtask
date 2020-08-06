@@ -1,0 +1,42 @@
+body {
+  color: $black;
+  font: {
+    size: 1rem;
+    family: $default-font-family;
+  }
+}
+
+body,
+body * {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  font: {
+    weight: 600;
+    size: 1.0625rem;
+  }
+}
+
+h3 {
+  font: {
+    weight: 600;
+    size: 1rem;
+  }
+}
+
+button {
+  border: none;
+  padding: 0;
+  outline: none;
+  display: flex;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.no-decoration {
+  text-decoration: none;
+}

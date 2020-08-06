@@ -1,0 +1,17 @@
+@import '@assets/styles/settings';
+
+.cardList {
+  display: grid;
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  @include lg {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,49 @@
+@import '@assets/styles/settings';
+
+.container {
+  height: 100%;
+}
+
+.inner {
+  height: calc(100% - #{$header-height});
+  background-color: $white;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: 60px;
+  padding: {
+    top: 6px;
+    bottom: 6px;
+  }
+  margin-bottom: 16px;
+
+  background-color: #3FB379;
+  color: #fff;
+}
+
+.head,
+.description {
+  padding: {
+    left: 12px;
+    right: 12px;
+  }
+}
+
+.title {
+  font: {
+    size: 1rem;
+    weight: 600;
+  }
+}
+
+.category {
+  font-size: 0.75rem;
+}
+
+.text {
+  margin-bottom: 26px;
+}

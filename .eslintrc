@@ -1,0 +1,130 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": { "jsx": true }
+  },
+  "extends": [
+    "airbnb",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "ENV": false,
+    "history": false
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react-hooks"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "settings": {
+    "react": { "version": "16.13.1" },
+    "import/extensions": [".js",".jsx",".ts",".tsx"],
+    "import/parsers": { "@typescript-eslint/parser": [".ts",".tsx"] },
+    "import/resolver": {
+      "node": { "extensions": [".js",".jsx",".ts",".tsx", ".d.ts"] },
+      "alias": {
+        "map": [
+          ["@containers", "./src/containers"],
+          ["@components", "./src/components"],
+          ["@utils", "./src/utils"],
+          ["@constants", "./src/constants"],
+          ["@store", "./src/store"],
+          ["@models", "./src/models"],
+          ["@services", "./src/services"],
+          ["@layout", "./src/layout"],
+          ["@assets", "./src/assets"]
+        ],
+        "extensions": [".js",".jsx",".ts",".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "semi": ["warn", "never"],
+    "comma-dangle": ["error", "never"],
+    "max-len": ["error", {
+      "code": 140,
+      "ignoreComments": true,
+      "ignoreUrls": true,
+      "ignoreStrings": true,
+      "ignoreRegExpLiterals": true
+    }],
+    "no-confusing-arrow": "off",
+    "global-require": "off",
+    "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+    "implicit-arrow-linebreak": "off",
+    "no-underscore-dangle": "off",
+    "no-unused-expressions": "off",
+    "jsx-quotes": ["error", "prefer-single"],
+    "no-shadow": "off",
+    "object-curly-newline": "off",
+    "no-plusplus": "off",
+    "no-restricted-globals": "off",
+    "no-debugger": "warn",
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "prefer-const": "error",
+    "no-extra-parens": ["error", "all"],
+    "require-await": "error",
+    "object-property-newline": ["error", { "allowAllPropertiesOnSameLine": false }],
+    "padding-line-between-statements": ["error", {
+      "blankLine": "always",
+      "prev": "*",
+      "next": "return"
+    }],
+    "prefer-promise-reject-errors": "off",
+    "operator-linebreak": ["error", "after"],
+    "arrow-parens": ["error", "as-needed"],
+    "radix": ["error", "as-needed"],
+    "max-depth": ["warn", { "max": 2 }],
+    "max-lines": ["warn", {
+      "max": 120,
+      "skipBlankLines": true,
+      "skipComments": true
+    }],
+    "max-params": ["warn", { "max": 3 }],
+    "max-nested-callbacks": ["warn", { "max": 3 }],
+    "consistent-return": "off",
+    "no-mixed-operators": "off",
+    "no-nested-ternary": "off",
+    "class-methods-use-this": "off",
+    "import/no-named-as-default": "off",
+    "import/prefer-default-export": "off",
+    "import/extensions": "off",
+    "import/order": ["error", {
+      "groups": [
+        ["builtin", "external"],
+        ["internal", "parent", "sibling", "index"]
+      ],
+      "newlines-between": "always"
+    }],
+    "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }],
+    "react/jsx-wrap-multilines": ["error", {
+      "declaration": "ignore",
+      "arrow": "ignore"
+    }],
+    "react/destructuring-assignment": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/state-in-constructor": "off",
+    "react/static-property-placement": ["error", "static public field"],
+    "react/jsx-max-props-per-line": ["error", { "maximum": 1 }],
+    "react/jsx-first-prop-new-line": ["error", "multiline"],
+    "react/jsx-closing-bracket-location": "error",
+    "react/jsx-curly-brace-presence": ["error", "never"],
+    "react/no-did-update-set-state": "off",
+    "react/prop-types": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "@typescript-eslint/ban-ts-ignore": "off"
+  }
+}
